@@ -76,7 +76,7 @@ export default function EntryApp() {
           onSubmit={handleAddEntry}
           className="w-full max-w-xl bg-white p-10 m-6 rounded-xl shadow-xl border border-blue-100 space-y-6"
         >
-          <h2 className="text-2xl font-bold text-blue-500 text-center mb-3">
+          <h2 className="text-2xl font-bold text-black text-center mb-3">
             Add New Entry
           </h2>
 
