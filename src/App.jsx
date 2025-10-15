@@ -29,6 +29,7 @@ const db = getFirestore(app);
 const SOURCES = [
   "Saraf Agencies",
   "Rajeev Saraf",
+  "Rajeev Saraf HUF",
   "Suman Saraf",
   "Madhav Saraf",
 ];
@@ -155,7 +156,10 @@ export default function App() {
       (sum, e) => sum + (parseFloat(e.amount) || 0),
       0
     );
-    return { groupedEntries: grouped, grandTotal: total };
+    return {
+      groupedEntries: Object.fromEntries(Object.entries(grouped).sort()),
+      grandTotal: total,
+    };
   }, [entries]);
 
   const handleAddEntry = async (e) => {
